@@ -14,5 +14,9 @@ code {
 
 body {
   background-color: black;
-  color: salmon;
+  color: cyan;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
 }
