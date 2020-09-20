@@ -1,10 +1,10 @@
 import React from 'react';
 import './square.scss';
 
-function Square({x=10,y=10, isActive=true}) {
+function Square({x,y,isActive}) {
   return (
-    <div className="square">
-      <span>{`${x}--${y}--${String(isActive)}`}</span>
+    <div className={`${isActive && 'active'} square`}>
+      <span className="square-marker">0</span>
     </div>
   )
 }

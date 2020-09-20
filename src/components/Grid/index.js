@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Row from '../Row/';
+import createInitialGrid from '../../helpers.js';
 import './grid.scss';
 
 function Grid() {
-  const squares = [{x: 42, y: 45, isActive: false},
-    {x: 42, y: 45, isActive: false}
-  ];
+  const [ grid, setGrid ] = useState(createInitialGrid(300));
 
   return (
     <div className="grid">
-      <Row squares={squares} />
+      {
+        grid.map((row,i) => (
+          <Row key={i} squares={row}/>
+        ))
+      }
     </div>
   )
 }
